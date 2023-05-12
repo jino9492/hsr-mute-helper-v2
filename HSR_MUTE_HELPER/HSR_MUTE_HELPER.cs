@@ -70,7 +70,7 @@ namespace HSR_MUTE_HELPER
             })));
 
             notifyIcon = new NotifyIcon();
-            notifyIcon.Icon = new Icon(Application.StartupPath + "/Resources/" + "main.ico");
+            notifyIcon.Icon = new Icon(Application.StartupPath + "/Resources/" + (string)jsonObject["icon"]);
             notifyIcon.ContextMenu = contextMenu;
             notifyIcon.Visible = true;
 
