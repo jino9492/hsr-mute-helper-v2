@@ -1,0 +1,52 @@
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\HSR_MUTE_HELPER.exe.config
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\HSR_MUTE_HELPER.exe
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\HSR_MUTE_HELPER.pdb
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\obj\Debug\HSR_MUTE_HELPER.Properties.Resources.resources
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\obj\Debug\HSR_MUTE_HELPER.exe
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\obj\Debug\HSR_MUTE_HELPER.pdb
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\obj\Debug\HSR_MUTE_HELPER.Mixer.resources
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\NAudio.Asio.dll
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\NAudio.Core.dll
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\NAudio.dll
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\NAudio.Midi.dll
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\NAudio.Wasapi.dll
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\NAudio.WinForms.dll
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\NAudio.WinMM.dll
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\System.Security.AccessControl.dll
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\NAudio.xml
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\System.Security.AccessControl.xml
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\User\source\repos\HSR 음소거 팝업\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\HSR_MUTE_HELPER.exe.config
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\HSR_MUTE_HELPER.exe
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\HSR_MUTE_HELPER.pdb
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\NAudio.Asio.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\NAudio.Core.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\NAudio.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\NAudio.Midi.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\NAudio.Wasapi.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\NAudio.WinForms.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\NAudio.WinMM.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\System.Security.AccessControl.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\NAudio.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\System.Security.AccessControl.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\obj\Debug\HSR_MUTE_HELPER.Mixer.resources
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\obj\Debug\HSR_MUTE_HELPER.Properties.Resources.resources
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\obj\Debug\HSR_MUTE_HELPER.exe
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\obj\Debug\HSR_MUTE_HELPER.pdb
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\User\source\repos\HSR_MUTE_HELPER\WindowsFormsApp1\bin\Debug\Newtonsoft.Json.xml

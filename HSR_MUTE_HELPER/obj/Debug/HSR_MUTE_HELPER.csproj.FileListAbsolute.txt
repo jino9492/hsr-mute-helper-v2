@@ -1,0 +1,48 @@
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\HSR_MUTE_HELPER.exe
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\HSR_MUTE_HELPER.pdb
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\NAudio.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\System.Security.AccessControl.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.Mixer.resources
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.Properties.Resources.resources
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csproj.GenerateResource.cache
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csproj.CopyComplete
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.exe
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.pdb
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csproj.Fody.CopyLocal.cache
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\HSR_MUTE_HELPER.exe.config
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\System.Buffers.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\System.Memory.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csprojAssemblyReference.cache
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.exe.config
+C:\Users\User\source\repos\HSR_MUTE_HELPER\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\HSR_MUTE_HELPER.exe.config
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\HSR_MUTE_HELPER.exe
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\HSR_MUTE_HELPER.pdb
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\NAudio.xml
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\Newtonsoft.Json.xml
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\System.Buffers.xml
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\System.Memory.xml
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\System.Security.AccessControl.xml
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csprojAssemblyReference.cache
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.exe.config
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.Mixer.resources
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.Properties.Resources.resources
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csproj.GenerateResource.cache
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csproj.Fody.CopyLocal.cache
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.csproj.CopyComplete
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.exe
+C:\Users\User\source\repos\hsr-mute-helper - 복사본\HSR_MUTE_HELPER\obj\Debug\HSR_MUTE_HELPER.pdb
