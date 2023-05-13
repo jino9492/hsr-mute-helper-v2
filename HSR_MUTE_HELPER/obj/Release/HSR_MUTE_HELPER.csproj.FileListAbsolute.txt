@@ -57,7 +57,6 @@ C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\bin\Release\System
 C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\bin\Release\System.Security.AccessControl.xml
 C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\bin\Release\System.Security.Principal.Windows.xml
-C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\obj\Release\HSR_MUTE_HELPER.csprojAssemblyReference.cache
 C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\obj\Release\HSR_MUTE_HELPER.exe.config
 C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\obj\Release\HSR_MUTE_HELPER.Mixer.resources
 C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\obj\Release\HSR_MUTE_HELPER.Properties.Resources.resources

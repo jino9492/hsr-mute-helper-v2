@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace HSR_MUTE_HELPER
@@ -18,7 +19,20 @@ namespace HSR_MUTE_HELPER
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HSR_MUTE_HELPER());
+
+            string processName = Process.GetCurrentProcess().ProcessName;
+            Process[] processes = Process.GetProcessesByName(processName);
+
+            if (processes.Length > 1)
+            {
+                MessageBox.Show("이미 프로그램이 실행 중입니다.", "HSR_MUTE_HELPER WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else
+            {
+                MessageBox.Show("프로그램이 정상적으로 실행되었습니다.", "HSR_MUTE_HELPER INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Run(new HSR_MUTE_HELPER());
+            }
         }
     }
 }

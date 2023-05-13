@@ -1,1 +1,4 @@
-{"program" :  "StarRail", "icon" :  "main.ico"}
+{
+  "program": [ "StarRail", "BH3" ],
+  "icon": "main.ico"
+}
