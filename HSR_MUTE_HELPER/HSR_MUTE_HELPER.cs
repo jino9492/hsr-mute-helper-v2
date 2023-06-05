@@ -8,6 +8,7 @@ using NAudio.CoreAudioApi;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 
 namespace HSR_MUTE_HELPER
@@ -32,30 +33,36 @@ namespace HSR_MUTE_HELPER
         public static int programCount = GetTargetProgramsCount();
 
         public static AudioSessionControl[] GetTargetProgram(){
-            MMDeviceEnumerator enumerator = new MMDeviceEnumerator();
-            MMDevice defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia);
-            SessionCollection sessionEnumerator = defaultDevice.AudioSessionManager.Sessions;
-
-            AudioSessionControl[] result = new AudioSessionControl[programCount];
-            for (int j = 0; j < programCount; j++)
+            try
             {
-                for (int i = 0; i < sessionEnumerator.Count; i++)
-                {
+                MMDeviceEnumerator enumerator = new MMDeviceEnumerator();
+                MMDevice defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia);
+                SessionCollection sessionEnumerator = defaultDevice.AudioSessionManager.Sessions;
 
-                    if (Process.GetProcessById((int)sessionEnumerator[i].GetProcessID) != null
-                        && Process.GetProcessById((int)sessionEnumerator[i].GetProcessID).ProcessName.Equals((string)jsonObject["program"][j]))
+                AudioSessionControl[] result = new AudioSessionControl[programCount];
+                for (int j = 0; j < programCount; j++)
+                {
+                    for (int i = 0; i < sessionEnumerator.Count; i++)
                     {
-                        result[j] = sessionEnumerator[i];
-                        break;
-                    }
-                    else
-                    {
-                        result[j] = null;
+
+                        if (Process.GetProcessById((int)sessionEnumerator[i].GetProcessID) != null
+                            && Process.GetProcessById((int)sessionEnumerator[i].GetProcessID).ProcessName.Equals((string)jsonObject["program"][j]))
+                        {
+                            result[j] = sessionEnumerator[i];
+                            break;
+                        }
+                        else
+                        {
+                            result[j] = null;
+                        }
                     }
                 }
-            }
 
-            return result;
+                return result;
+            }
+            catch {
+                return GetTargetProgram();
+            }
         }
         #endregion
 
@@ -84,7 +91,7 @@ namespace HSR_MUTE_HELPER
 
         public HSR_MUTE_HELPER()
         {
-            CheckTargetState();
+            FindTarget();
 
             contextMenu = new ContextMenu();
             contextMenu.MenuItems.Add(new MenuItem("Exit", new EventHandler((sender, e) =>
@@ -108,43 +115,90 @@ namespace HSR_MUTE_HELPER
 
         #region Target Program State Check Function
         private Timer timer;
-        public void CheckTargetState()
+        private Timer timer2;
+        public bool isActivatingCTS;
+        
+        public void FindTarget()
         {
-            timer = new Timer();
-            timer.Interval = 16;
-            timer.Tick += new EventHandler((sender, e) => {
-                for (int i = 0; i < Mixer.programCount; i++)
-                {
-                    if (Mixer.target[i] == null || Mixer.target[i].State == NAudio.CoreAudioApi.Interfaces.AudioSessionState.AudioSessionStateExpired)
-                    {
-                        UnMuteApp(i);
-                        if (Process.GetProcessesByName((string)jsonObject["program"][i]).Length > 0)
-                            Mixer.target = Mixer.GetTargetProgram();
-                    }
-                    else
-                    {
-                        [DllImport("user32.dll")]
-                        static extern IntPtr GetForegroundWindow();
+            ChangeTargetState().Wait();
+            timer2 = new Timer();
+            timer2.Interval = 5000;
+            timer2.Tick += new EventHandler(async (sender, e) =>
+            {
+                Mixer.target = await Task.Run(() => Mixer.GetTargetProgram());
 
-                        IntPtr handle = GetForegroundWindow();
-                        try
-                        {
-                            if (Process.GetProcessById((int)Mixer.target[i].GetProcessID).MainWindowHandle == handle)
-                            {
-                                UnMuteApp(i);
-                            }
-                            else
-                            {
-                                MuteApp(i);
-                            }
-                        }
-                        catch
-                        {
-                            continue;
-                        }
+                foreach (AudioSessionControl t in Mixer.target)
+                {
+                    Debug.Print(isActivatingCTS.ToString());
+                    if (t != null && !isActivatingCTS)
+                    {
+                        await ChangeTargetState();
+                        break;
                     }
                 }
                 
+            });
+
+            timer2.Start();
+        }
+
+        public async Task ChangeTargetState()
+        {
+            isActivatingCTS = true;
+            IntPtr lastHandle = new IntPtr();
+            IntPtr handle = new IntPtr();
+            
+            timer = new Timer();
+            timer.Interval = 16;
+            timer.Tick += new EventHandler(async (sender, e) => {
+                    await Task.Run(() => {
+                    int cnt = 0;
+                    for (int i = 0; i < Mixer.programCount; i++)
+                    {
+                        if (Mixer.target[i] == null || Mixer.target[i].State == NAudio.CoreAudioApi.Interfaces.AudioSessionState.AudioSessionStateExpired)
+                        {
+                            cnt++;
+                        }
+                        else
+                        {
+                            try
+                            {
+                                [DllImport("user32.dll")]
+                                static extern IntPtr GetForegroundWindow();
+
+                                handle = GetForegroundWindow();
+
+                                if (handle != lastHandle)
+                                {
+                                    if (Process.GetProcessById((int)Mixer.target[i].GetProcessID).MainWindowHandle == handle)
+                                    {
+                                        UnMuteApp(i);
+                                    }
+                                    else
+                                    {
+                                        MuteApp(i);
+                                    }
+                                }
+                            }
+                            catch
+                            {
+                                cnt++;
+                                continue;
+                            }
+                            
+                        }
+                        
+                    }
+                    
+                    lastHandle = handle;
+
+                    if (cnt == Mixer.programCount)
+                    {
+                        isActivatingCTS = false;
+                        timer.Stop();
+                    }
+
+                });
             });
             timer.Start();
         }
