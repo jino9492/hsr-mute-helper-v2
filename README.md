@@ -3,11 +3,11 @@
 > Tool program to mute programs(HSR or others) background. It is useful for the game that do not provide background mute.
 >
 > ## How To Use
-> * In setting.json, Modify program's name(program) and thumnail(icon). Default is StarRail.
+> * In setting.json, Modify programs' name(program) and thumnail(icon). Default is StarRail and BH3.
 > * Put the file corresponding to the icon in the Resources folder.
 > * Program's name is (this).exe in task manager. (ex. HSR is StarRail.exe, So use StarRail.)
 >
-> ![image](https://github.com/jino9492/hsr-mute-helper-v2/assets/66864237/79eef3e4-a6f1-4003-974b-770ded0f6774)
+> ![image](https://github.com/jino9492/hsr-mute-helper-v2/assets/66864237/86f7b9d8-6436-43ca-ba50-ef0df3b4ebb0)
 >
 > * Click right mouse button and Exit button to quit this in system tray.
 > 
@@ -21,11 +21,11 @@
 > 백그라운드 음소거를 지원하지 않는 게임에서 유용한 음소거 툴.
 >
 > ## How To Use
-> * setting.json 파일에서 음소거할 프로그램의 이름과 아이콘 파일의 이름을 쓴다. 기본값은 StarRail.
+> * setting.json 파일에서 음소거할 프로그램들의 이름과 아이콘 파일의 이름을 쓴다. 기본값은 StarRail, BH3.
 > * 써 넣은 아이콘 파일의 이름에 대응하는 파일을 Resources 파일에 집어넣는다.
 > * 프로그램의 이름은 작업 관리자에 적혀있는 것 기준으로, (이것).exe를 쓴다. (ex. 스타레일의 경우 StarRail.exe이므로 StarRail을 씀)
 >
-> ![image](https://github.com/jino9492/hsr-mute-helper-v2/assets/66864237/79eef3e4-a6f1-4003-974b-770ded0f6774)
+> ![image](https://github.com/jino9492/hsr-mute-helper-v2/assets/66864237/244857d6-3705-499f-81b9-db87a6c83e7a)
 >
 > * 시스템 트레이에서 프로그램을 찾아 우클릭하고, Exit 버튼을 누르면 종료된다.
 >
