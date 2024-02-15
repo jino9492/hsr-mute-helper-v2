@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using System.Linq;
 
 
 namespace HSR_MUTE_HELPER
@@ -19,41 +20,48 @@ namespace HSR_MUTE_HELPER
         #region Find App
         static string settingJson = File.ReadAllText(Application.StartupPath + "/setting.json");
         static dynamic jsonObject = JsonConvert.DeserializeObject(settingJson);
+        static JArray programArray = jsonObject["program"] as JArray;
+        static List<string> programList = programArray.ToObject<List<string>>();
 
         public static int GetTargetProgramsCount()
         {
-            JArray programArray = jsonObject["program"] as JArray;
-
             if (programArray != null)
                 return programArray.Count;
             else
                 return 0;
         }
 
-        public static int programCount = GetTargetProgramsCount();
+        //public static int programCount = GetTargetProgramsCount();
 
-        public static AudioSessionControl[] GetTargetProgram(){
+        public static Dictionary<Process, AudioSessionControl> GetTargetProgram(){
             try
             {
                 MMDeviceEnumerator enumerator = new MMDeviceEnumerator();
                 MMDevice defaultDevice = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia);
                 SessionCollection sessionEnumerator = defaultDevice.AudioSessionManager.Sessions;
 
-                AudioSessionControl[] result = new AudioSessionControl[programCount];
-                for (int j = 0; j < programCount; j++)
+                Dictionary<Process, AudioSessionControl> result = new Dictionary<Process, AudioSessionControl>();
+                for (int i = 0; i < sessionEnumerator.Count; i++)
                 {
-                    for (int i = 0; i < sessionEnumerator.Count; i++)
-                    {
 
-                        if (Process.GetProcessById((int)sessionEnumerator[i].GetProcessID) != null
-                            && Process.GetProcessById((int)sessionEnumerator[i].GetProcessID).ProcessName.Equals((string)jsonObject["program"][j]))
+                    if (Process.GetProcessById((int)sessionEnumerator[i].GetProcessID) != null)
+                    {
+                        int pid = (int)sessionEnumerator[i].GetProcessID;
+                        Process process = Process.GetProcessById(pid);
+                        if (programList.Contains(process.ProcessName))
                         {
-                            result[j] = sessionEnumerator[i];
-                            break;
+                            result.Add(process, sessionEnumerator[i]);
                         }
                         else
                         {
-                            result[j] = null;
+                            try
+                            {
+                                result.Remove(process);
+                            }
+                            catch
+                            {
+                                continue;
+                            }
                         }
                     }
                 }
@@ -67,7 +75,7 @@ namespace HSR_MUTE_HELPER
         #endregion
 
         #region Mute App Functions
-        public static AudioSessionControl[] target { get; set; } = GetTargetProgram();
+        public static Dictionary<Process, AudioSessionControl> target { get; set; } = GetTargetProgram();
         #endregion
     }
 
@@ -126,17 +134,10 @@ namespace HSR_MUTE_HELPER
             timer2.Tick += new EventHandler(async (sender, e) =>
             {
                 Mixer.target = await Task.Run(() => Mixer.GetTargetProgram());
-
-                foreach (AudioSessionControl t in Mixer.target)
+                if (!isActivatingCTS)
                 {
-                    Debug.Print(isActivatingCTS.ToString());
-                    if (t != null && !isActivatingCTS)
-                    {
-                        await ChangeTargetState();
-                        break;
-                    }
+                    await ChangeTargetState();
                 }
-                
             });
 
             timer2.Start();
@@ -152,52 +153,42 @@ namespace HSR_MUTE_HELPER
             timer.Interval = 16;
             timer.Tick += new EventHandler(async (sender, e) => {
                     await Task.Run(() => {
-                    int cnt = 0;
-                    for (int i = 0; i < Mixer.programCount; i++)
+                    foreach(KeyValuePair<Process, AudioSessionControl> t in Mixer.target)
                     {
-                        if (Mixer.target[i] == null || Mixer.target[i].State == NAudio.CoreAudioApi.Interfaces.AudioSessionState.AudioSessionStateExpired)
+                        try
                         {
-                            cnt++;
-                        }
-                        else
-                        {
-                            try
+                            [DllImport("user32.dll")]
+                            static extern IntPtr GetForegroundWindow();
+
+                            handle = GetForegroundWindow();
+
+                            if (handle != lastHandle)
                             {
-                                [DllImport("user32.dll")]
-                                static extern IntPtr GetForegroundWindow();
-
-                                handle = GetForegroundWindow();
-
-                                if (handle != lastHandle)
+                                if (t.Key.MainWindowHandle == handle)
                                 {
-                                    if (Process.GetProcessById((int)Mixer.target[i].GetProcessID).MainWindowHandle == handle)
-                                    {
-                                        UnMuteApp(i);
-                                    }
-                                    else
-                                    {
-                                        MuteApp(i);
-                                    }
+                                    UnMuteApp(t.Value);
+                                }
+                                else
+                                {
+                                    MuteApp(t.Value);
                                 }
                             }
-                            catch
-                            {
-                                cnt++;
-                                continue;
-                            }
-                            
+                        }
+                        catch
+                        {
+                            continue;
                         }
                         
                     }
                     
                     lastHandle = handle;
 
-                    if (cnt == Mixer.programCount)
+                    if (Mixer.target.Count <= 0)
                     {
                         isActivatingCTS = false;
                         timer.Stop();
                     }
-
+                            
                 });
             });
             timer.Start();
@@ -205,18 +196,18 @@ namespace HSR_MUTE_HELPER
         #endregion
 
         #region Mute Function
-        public void MuteApp(int idx)
+        public void MuteApp(AudioSessionControl target)
         {
-            if (Mixer.target[idx] != null)
+            if (target != null)
             {
-                Mixer.target[idx].SimpleAudioVolume.Mute = true;
+                target.SimpleAudioVolume.Mute = true;
             }
         }
-        public void UnMuteApp(int idx)
+        public void UnMuteApp(AudioSessionControl target)
         {
-            if (Mixer.target[idx] != null)
+            if (target != null)
             {
-                Mixer.target[idx].SimpleAudioVolume.Mute = false;
+                target.SimpleAudioVolume.Mute = false;
             }
         }
         #endregion

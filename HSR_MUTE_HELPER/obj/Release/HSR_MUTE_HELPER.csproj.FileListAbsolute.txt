@@ -67,3 +67,4 @@ C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\obj\Release\HSR_MU
 C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\obj\Release\HSR_MUTE_HELPER.csproj.CopyComplete
 C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\obj\Release\HSR_MUTE_HELPER.exe
 C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\obj\Release\HSR_MUTE_HELPER.pdb
+C:\Users\User\source\repos\hsr-mute-helper-v2\HSR_MUTE_HELPER\obj\Release\HSR_MUTE_HELPER.csprojAssemblyReference.cache
