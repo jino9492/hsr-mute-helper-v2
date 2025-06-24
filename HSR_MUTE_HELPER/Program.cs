@@ -50,7 +50,7 @@ namespace HSR_MUTE_HELPER
 
                 if (!err)
                 {
-                    MessageBox.Show("프로그램이 정상적으로 실행되었습니다.", "HSR_MUTE_HELPER INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("프로그램이 정상적으로 실행되었습니다.", "HSR_MUTE_HELPER INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Application.Run(new HSR_MUTE_HELPER());
                 }
             }
